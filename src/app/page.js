@@ -11,13 +11,6 @@ export default function Home() {
   const [requestSent, setRequestSent] = useState(false);
   const [optionSelected, setOptionSelected] = useState(false);
 
-  const fetchData = () => {
-    axios
-      .get("/get-website-data")
-      .then((res) => console.log(res.data))
-      .catch((e) => console.log(e));
-  };
-
   const handleWebsiteChange = (e) => {
     setWebsite(e.target.value);
   };
